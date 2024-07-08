@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Movies 1</title>
+	<link rel="stylesheet" type="text/css" href="movies1.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<style type="text/css">
+		.movie-detail {
+	  		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(https://i.pinimg.com/474x/37/93/ce/3793ceb2327983a8046b8977a5f46d0f.jpg);
+	  		background-size: cover;
+	  		width: 100%;
+	  		height: 700px;
+}
+	</style>
+<body>
+	<!--HEADER PART-->
+	<header class="stikey">
+		<div class="navb">
+			<div class="logo">
+				<a href="./index.html"><img src="images/logo/e.png" alt=""></a>
+				<a href="index.html"><h3>FILM REVIEW</h3></a>
+			</div>
+			<div class="nav">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#movies">Movies</a></li>
+					<li><a href="#genere">Genere</a></li>
+					<li><a href="#series">Series</a></li>
+				</ul>
+			</div>
+			<div class="user">
+				<i class="fa-solid fa-magnifying-glass"></i>
+				<span class="line4"></span>
+				<i class="fa-solid fa-earth-americas"></i>
+				<select name="language">
+					<option value="lan">EN</option>
+					<option value="lan">VN</option>
+					<option value="lan">AU</option>
+					<option value="lan">AR</option>
+				</select>
+				<i class="fa-solid fa-bell"></i>
+				<button class="btn btn-primary">Sign in</button>
+			</div>
+		</div>	
+	</header>
+	<!------------->
+
+
+	<main>
+		<article>
+			<section class="movie-detail">
+				<div class="container">
+					<div class="movie-detail-banner">
+						
+						<img src="https://i.pinimg.com/474x/37/93/ce/3793ceb2327983a8046b8977a5f46d0f.jpg">
+
+						<button class="play-btn">
+							<i class="fa-sharp fa-regular fa-circle-play"></i>
+						</button>
+					</div>
+
+					<div class="movie-detail-content">
+						
+						<p class="detail-subtitle">New Episodes</p>
+						<h1 class="detail-title">Batman vs Superman</h1>
+
+						<div class="meta-wrapper">
+							
+							<div class="badge1 badge-wrapper">
+								<div class="badge badge-fill">PG 13</div>
+
+								<div class="badge badge-outline">2K</div>
+							</div>
+
+							<div class="ganre-wrapper">
+								<a href="">Action</a>
+								<a href="">Fiction</a>
+								<a href="">Science Fiction</a>
+							</div>
+
+							<div class="date-time">
+								
+								<div class="calendar1">
+									<i class="fa-solid fa-calendar-days"></i>
+									<time datetime="2016">2016</time>
+								</div>
+
+								<div class="calendar2">
+									<i class="fa-solid fa-clock"></i>
+									<time datetime="PT45M">190 min</time>
+								</div>
+							</div>
+						</div>
+						<p class="storyline">
+							The General Citizen is interested in having Superman on their planet and letting the "Dark Knight" - Batman - pursue the streets of Gotham. While this is happening, a powerful-obsessed batman tries to attack Superman. Meanwhile, Superman tries to work out the decision and Lex Luthor, Mastermind, and the guilty Millionaire, try to use their own advantages to fight the "Man of Steel".
+						</p>
+						<div class="star">
+	        				<i class="fa-solid fa-star"></i>
+	        				<i class="fa-solid fa-star"></i>
+	        				<i class="fa-solid fa-star"></i>
+	        				<i class="fa-regular fa-star"></i>
+	        				<i class="fa-regular fa-star"></i>
+	        			</div>
+						<div class="details-actions">
+							
+							<button class="share">
+								<i class="fa-sharp fa-solid fa-share-nodes"></i>
+
+								<span>Share</span>
+							</button>
+
+							<div class="title-wrapper">
+								<p class="title">Prime Video</p>
+
+								<p class="text">Streaming Channels</p>
+							</div>
+
+							<button class="btn1 btn-primary">
+								<a href=""><i class="fa-solid fa-play"></i>WATCH NOW</a>
+							</button>
+						</div>
+
+						<a href="" class="download-btn">
+							<span>Download</span>
+
+							<i class="fa-solid fa-download"></i>
+						</a>
+						<div id="play" class="play" onclick="closeVideo()">
+                        	<a href="javascript:void" class="close-movie">
+                            <i class="fa-solid fa-xmark"></i>
+                        	</a>
+                        	<div class="play-movie">
+                            <video id="m-video" controls>
+                                <source src="video/video7.mp4" type="video/mp4">
+                            </video>
+                        	</div>
+                    	</div>   
+                    	<script type="text/javascript">
+                    		document.addEventListener('click', function(event) {
+	  							var target = event.target;
+	  							if (target.matches('.btn1 a')) {
+	   								var playSection = document.querySelector('.play');
+	    							playSection.classList.add('active-popup');
+	  							}
+							});
+							function closeVideo() {
+							    var playSection = document.getElementById("play");
+							    playSection.style.display = "none";
+
+							    var video = document.getElementById("m-video");
+							    video.pause();
+							}
+                    	</script>
+					</div>
+				</div>
+				
+			</section>
+			
+
+
+			<section class="tv-series">
+				<div class="container">
+					<p class="section-subtitle">Best TV Series</p>
+					<h2 class="h2 section-title">World Best TV Series</h2>
+					<ul class="movies-list">
+						<li>
+							<div class="movie-card">
+								
+								<a href="movie_best1.html" target="_blank">
+									<img src="images/movies/series-1.png">
+								</a>
+
+								<div class="title-wrapper">
+									<a href="movie_best1.html" target="_blank">
+										<h3 class="card-title">Moon Knight</h3>
+									</a>
+
+									<time datetime="2022">2022</time>
+								</div>
+
+								<div class="card-meta">
+									<div class="badge badge-outline">2K</div>
+
+									<div class="duration">
+										<i class="fa-solid fa-clock"></i>
+
+										<time datetime="PT47M">47 min</time>
+									</div>
+
+									<div class="rating">
+										<i class="fa-solid fa-star"></i>
+
+										<data>8.6</data>
+									</div>
+								</div>
+
+							</div>
+						</li>
+
+						<li>
+							<div class="movie-card">
+								<a href="movie_best2.html" target="_blank">
+									<figure class="card-banner">
+										<img src="images/movies/series-2.png">
+									</figure>
+								</a>
+
+								<div class="title-wrapper">
+									<a href="movie_best2.html" target="_blank">
+										<h3 class="card-title">Halo</h3>
+									</a>
+
+									<time datetime="2022">2022</time>
+								</div>
+
+								<div class="card-meta">
+									<div class="badge badge-outline">2K</div>
+
+									<div class="duration">
+										<i class="fa-solid fa-clock"></i>
+
+										<time datetime="PT59M">59 min</time>
+									</div>
+
+									<div class="rating">
+										<i class="fa-solid fa-star"></i>
+
+										<data>8.8</data>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="movie-card">
+								<a href="movie_best3.html" target="_blank">
+									<figure class="card-banner">
+										<img src="images/movies/series-3.png">
+									</figure>
+								</a>
+
+								<div class="title-wrapper">
+									<a href="movie_best3.html" target="_blank">
+										<h3 class="card-title">Vikings: Valhalla</h3>
+									</a>
+
+									<time datetime="2022">2022</time>
+								</div>
+
+								<div class="card-meta">
+									<div class="badge badge-outline">2K</div>
+
+									<div class="duration">
+										<i class="fa-solid fa-clock"></i>
+
+										<time datetime="PT51M">51 min</time>
+									</div>
+
+									<div class="rating">
+										<i class="fa-solid fa-star"></i>
+
+										<data>8.3</data>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="movie-card">
+								<a href="movie_best4.html" target="_blank">
+									<figure class="card-banner">
+										<img src="images/movies/series-4.png">
+									</figure>
+								</a>
+
+								<div class="title-wrapper">
+									<a href="movie_best4.html" target="_blank">
+										<h3 class="card-title">Money Heist</h3>
+									</a>
+
+									<time datetime="2017">2017</time>
+								</div>
+
+								<div class="card-meta">
+									<div class="badge badge-outline">4K</div>
+
+									<div class="duration">
+										<i class="fa-solid fa-clock"></i>
+
+										<time datetime="PT70M">70 min</time>
+									</div>
+
+									<div class="rating">
+										<i class="fa-solid fa-star"></i>
+
+										<data>8.3</data>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</article>
+	</main>
+
+
+
+	<section class="footer">
+    <div class="row">
+        <div class="col">
+            <a href="index1.html">
+                <img src="images/logo/e.png" class="logo">
+                <span class="logo1">Film Review</span>
+            </a>
+            <p>Subscribe Easy Tutorials Youtube channel to watch more videos on website development and Press the bell icon to get immediate notification of latest videos.</p>
+        </div>
+        <div class="col">
+            <h3>Office <div class="underline"><span></span></div></h3>
+            <p>ITPL Road</p>
+            <p>Whitefiled, Bangalore</p>
+            <p>DaNang, PIN 560066, VietNam</p>
+            <p class="email-id">avinashdm@outlook.com</p>
+            <h4>+84 - 954368591</h4>
+        </div>
+        <div class="col">
+            <h3>Links <div class="underline"><span></span></div></h3>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="movies">Movie</a></li>
+                <li><a href="genre">Genre</a></li>
+                <li><a href="series">Series</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Newsletter <div class="underline"><span></span></div></h3>
+            <form>
+                <i class="far fa-envelope"></i>
+                <input type="email" placeholder="Enter your email id" required>
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100057074845512"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/@phephimreview8"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/moviereviewsblog/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.pinterest.com/search/pins/?q=film%20review&rs=typed"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">Film Review © 2023 - All Rights Reserved</p>
+</section>
+
+</body>
+</html>

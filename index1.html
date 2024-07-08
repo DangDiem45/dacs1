@@ -1,0 +1,763 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="main1.css">
+      <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <a href="index1.html" class="logo">
+            <img src="images/logo/e.png" alt="">
+            <h3>FILM REVIEW</h3>
+        </a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <!-- menu  -->
+        <ul class="navbar">
+            <li><a href="#home" class="home-active">Home</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#genere">Genere</a></li>
+            <li><a href="#series">Series</a></li>
+        </ul>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="line4"></div>
+        <i class="fa-solid fa-earth-americas"></i>
+        <select name="language">
+            <option value="lan">EN</option>
+            <option value="lan">VN</option>
+            <option value="lan">AU</option>
+            <option value="lan">AR</option>
+        </select>
+        <i class="fa-solid fa-bell"></i>
+        <a href="signin.html" class="btn" target="_blank">Sign In</a>
+    </header>
+
+    <!-- Home -->
+    <section class="home swiper" id="home">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide container">
+                <img src="https://i.imgur.com/E0blicp.jpg" alt="">
+                <div class="home-text">
+                    <h1>Black Panther: Wakanda Forever</h1>
+                    <p>
+                        Black Panther: Wakanda Forever is the final film in Phase 4 of the Marvel Cinematic Universe, following Thor: Love and Thunder - one of the worst Marvel movies of the decade. Therefore, it is highly anticipated, especially this is also a tribute to Chadwick Boseman, the actor who made the great success of Black Panther (2018), but unfortunately passed away from cancer. when season 2 was in the early stages of development.
+                    </p>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="genre">
+                            
+                        <button class="bt1">PG 18</button>
+                        <button class="bt2">4K</button>
+                        <a href="" class="category1">Action</a>&emsp;
+                        <a href="" class="category2">Advanture</a>&emsp;
+                        <a href="" class="category3">Fiction</a>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>2023</span>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>130 min</span>
+
+                    </div>
+                    <div class="watch">
+                        <button class="btn" onclick="showVideo()">
+                            <a href=""><i class="fa-solid fa-play"></i>WATCH NOW</a>
+                        </button>
+                        <button class="btn btn-primary" id="hide"><i class="fa-solid fa-download"></i>DOWNLOAD</button>
+                    </div>
+                    <div id="play" class="play"  onclick="closeVideo()">
+                        <a href="javascript:void" class="close-movie">
+                            <i class="fa-solid fa-xmark"></i>
+                        </a>
+                        <div class="play-movie">
+                            <video id="m-video" controls>
+                                <source src="video/video1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+            <div class="swiper-slide container">
+                <img src="https://i.pinimg.com/474x/bc/73/39/bc7339e6fd9d390cd90f3058e72e36ba.jpg" alt="">
+                <div class="home-text">
+                    <h1>Avatar: The Way of Water</h1>
+                    <p>
+                        The content of The way of water is simple, dividing the good and evil factions almost clearly. The topic is familiar, the contradiction is not new and there is no twist. However, the film is very attractive. The family theme - "old bottle, old wine" still makes viewers get caught up in every detail. The issue of environmental protection sounds like a big deal, but it is conveyed very gently and naturally. James Cameron loves nature and that love permeates every footage.
+                    </p>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="genre">
+                            
+                        <button class="bt1">PG 18</button>
+                        <button class="bt2">HD</button>
+                        <a href="" class="category1">Action</a>&emsp;
+                        <a href="" class="category2">Sci-fi</a>&emsp;
+                        <a href="" class="category3">Fiction</a>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>2023</span>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>130 min</span>
+
+                    </div>
+                    <div class="watch">
+                        <button class="btn1 btn-primary bt3" onclick="showVideo1()">
+                            <a href=""><i class="fa-solid fa-play"></i>WATCH NOW</a>
+                        </button>
+                        <button class="btn btn-primary"><i class="fa-solid fa-download"></i>DOWNLOAD</button>
+                    </div>
+                    <div id="play1" class="play1"  onclick="closeVideo1()">
+                        <a href="javascript:void" class="close-movie1">
+                            <i class="fa-solid fa-xmark"></i>
+                        </a>
+                        <div class="play-movie1">
+                            <video id="m-video1" controls>
+                                <source src="video/video2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>     
+                </div>
+            </div>
+            <div class="swiper-slide container">
+                <img src="images/logo/b.jpg" alt="">
+                <div class="home-text">
+                    <h1>Pirates of the Caribbean: Dead Men Tell No Tales</h1>
+                    <p>
+                        The film takes the story around a young girl reluctantly gets caught up in a summer vacation trip with her boyfriend. They decide to go on vacation to a small village in Sweden, but coincidentally this is also the time when the peaceful village is preparing to hold a special festival that happens once every 90 years. However, that event turned out to require a lot of blood and things no one could have expected. The film is filled with gruesome frames with organs, mysterious smiles, drawings of evil spirits and strange rituals that begin to appear, making the hairs on the back of viewers' hairs rise, standing still.
+                    </p>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="genre">
+                            
+                        <button class="bt1">PG 18</button>
+                        <button class="bt2">HD</button>
+                        <a href="" class="category1">Action</a>&emsp;
+                        <a href="" class="category2">Drama</a>&emsp;
+                        <a href="" class="category3">Fiction</a>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>2022</span>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>128 min</span>
+
+                    </div>
+                    <div class="watch">
+                        <button class="btn2 btn-primary bt3" onclick="showVideo2()">
+                            <a href=""><i class="fa-solid fa-play"></i>WATCH NOW</a>
+                        </button>
+                        <button class="btn btn-primary"><i class="fa-solid fa-download"></i>DOWNLOAD</button>
+                    </div> 
+                    <div id="play2" class="play2"  onclick="closeVideo2()">
+                        <a href="javascript:void" class="close-movie2">
+                            <i class="fa-solid fa-xmark"></i>
+                        </a>
+                        <div class="play-movie2">
+                            <video id="m-video2" controls>
+                                <source src="video/video3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <div class="swiper-slide container">
+                <img src="https://gmedia.playstation.com/is/image/SIEPDC/uncharted-hub-listing-thumb-en-16aug21?$facebook$" alt="">
+                <div class="home-text">
+                    <h1>Uncharted</h1>
+                    <p>
+                        This is a movie of the same name with a game title, revolving around the story of a teenager Nathan Drake about 20 years old who embarked on a treasure hunt adventure of Ferdinand Magellan. On his journey to find the treasure, Drake met Sully and Chloe all three started their life and death journey together. All three have to go through dangerous and thrilling pitfalls. Can Drake and his two new companions successfully find the treasure?
+                    </p>
+                    <div class="star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="genre">
+                            
+                        <button class="bt1">PG 18</button>
+                        <button class="bt2">4K</button>
+                        <a href="" class="category1">Action</a>&emsp;
+                        <a href="" class="category2">Advanture</a>&emsp;
+                        <a href="" class="category3">Secret</a>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>2022</span>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>116 min</span>
+
+                    </div>
+                    <div class="watch">
+                        <button class="btn3 btn-primary bt3">
+                            <a href=""><i class="fa-solid fa-play"></i>WATCH NOW</a>
+                        </button>
+                        <button class="btn btn-primary"><i class="fa-solid fa-download"></i>DOWNLOAD</button>
+                    </div>   
+                </div>
+            </div>
+               
+        </div>
+        </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+<!-- movies  -->
+<section class="movies" id="movies">
+      <h2 class="heading">TRENDING ON FILM REVIEW</h2>
+      <!-- movies container  -->
+      <div class="movies-container">
+        <!-- box-1  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies1.html" target="_blank"><img src="https://i.pinimg.com/474x/d9/42/5f/d9425f6b00c8ee70757613afab50b0f9.jpg" alt=""></a>
+            </div>
+            <a href="movies1.html" style="text-decoration: none; color:white;" target="_blank"><h3>Lucifer</h3></a>
+            <span>120 min | Action</span>
+        </div>
+
+        <!-- box-2  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies2.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/76/1e/6a/761e6a0c93151db0ebb9e9c367974baa.jpg" alt="">
+                </a> 
+            </div>
+            <a href="movies2.html" style="text-decoration: none; color:white;" target="_blank"><h3>Shadow And Bone</h3></a>
+            <span>60 min | War</span>
+        </div>
+
+        <!-- box-3  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies3.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/37/93/ce/3793ceb2327983a8046b8977a5f46d0f.jpg" alt="">
+                </a> 
+            </div>
+            <a href="movies3.html" style="text-decoration: none; color:white;" target="_blank"><h3>Batman vs Superman</h3></a>
+            <span>190 min | Fiction</span>
+        </div>
+
+        <!-- box-4  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies4.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/f3/f4/c6/f3f4c64663457d886bd7508b6950c433.jpg" alt="">
+                </a>
+            </div>
+            <a href="movies4.html" style="text-decoration: none; color:white;" target="_blank"><h3>John Wick 2</h3></a>
+            <span>120 min | Thriller</span>
+        </div>
+    
+        <!-- box-5  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies5.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/f1/9e/ba/f19eba6cbc67fbca43d44a389f2bda78.jpg" alt="">
+                </a>
+            </div>
+            <a href="movies5.html" style="text-decoration: none; color:white;" target="_blank"><h3>Aquaman</h3></a>
+            <span>143 min | Adventure</span>
+        </div>
+
+        <!-- box-6  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies6.html" target="_blank">
+                <img src="https://i.pinimg.com/474x/00/74/0f/00740ff8170de4447b15b282d8359fe9.jpg" alt="">
+            </div>
+            <a href="movies6.html" style="text-decoration: none; color:white;" target="_blank"><h3>Godzilla</h3></a>
+            <span>131 min | Fiction</span>
+        </div>
+
+      <!-- box-7  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies7.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/14/33/0f/14330fc468ef22550289a1b4b4dcd1af.jpg" alt="">
+                </a> 
+            </div>
+            <a href="movies7.html" style="text-decoration: none; color:white;" target="_blank"><h3>The tomorrow war</h3></a>
+            <span>140 min | Science Fiction</span>
+        </div>
+    
+      <!-- box-8  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies8.html" target="_blank">
+                <img src="https://i.pinimg.com/474x/4e/63/50/4e635047df9135e23fbf7ace960b47ec.jpg" alt="">
+            </div>
+            <a href="movies8.html" style="text-decoration: none; color:white;" target="_blank"><h3>Brahmastra</h3></a>
+            <span>169 min | Action</span>
+        </div>
+
+      <!-- box-9  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies9.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/b5/de/bd/b5debd019634eebfb28a794dbd270be5.jpg" alt="">
+                </a>  
+            </div>
+            <a href="movies9.html" style="text-decoration: none; color:white;" target="_blank"><h3>Mortal-Engines</h3></a>
+            <span>128 min | Science</span>
+        </div>
+
+      <!-- box-10  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies10.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/91/26/b2/9126b24e0495236ebbf9daf44a937303.jpg" alt="">
+                </a>   
+            </div>
+            <a href="movies10.html" style="text-decoration: none; color:white;" target="_blank"><h3>Jungle Cruise</h3></a>
+            <span>127 min | Comedy</span>
+        </div>
+      </div>
+</section>
+
+<!-- Genere -->
+<section class="movies" id="genere">
+      <h2 class="heading">GENERE</h2>
+      <!-- movies container  -->
+      <div class="movies-container">
+        <!-- box-1  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies11.html" target="_blank"><img src="https://i.pinimg.com/474x/c3/a9/c8/c3a9c8ab3c993f403702a0d783e89445.jpg" alt=""></a>
+            </div>
+            <a href="movies11.html" style="text-decoration: none; color:white;" target="_blank"><h3>Drone</h3></a>
+            <span>91 min | Crime & Gangster</span>
+        </div>
+
+        <!-- box-2  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies12.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/14/06/66/140666efc1094e04aef199741adacc59.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies12.html" style="text-decoration: none; color:white;" target="_blank"><h3>Beyond The Mask</h3></a>
+            <span>103 min | Action</span>
+        </div>
+
+        <!-- box-3  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies13.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/44/7e/d4/447ed43295a8b13ef3130f19febdae39.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies13.html" style="text-decoration: none; color:white;" target="_blank"><h3>Venom</h3></a>
+            <span>112 min | Action</span>
+        </div>
+
+        <!-- box-4  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies14.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/66/bf/5d/66bf5d62443687dcd5219d5a422db089.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies14.html" style="text-decoration: none; color:white;" target="_blank"><h3>Game Of Throne</h3></a>
+            <span>57 min | War</span>
+        </div>
+    
+        <!-- box-5  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies15.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/b1/57/a8/b157a8f114475bb263102568ecbaca69.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies15.html" style="text-decoration: none; color:white;" target="_blank"><h3>Arrow</h3></a>
+            <span>60 min | Adventure</span>
+        </div>
+
+        <!-- box-6  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies16.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/26/4f/6b/264f6b01592bb160befa7af655f12ed1.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies16.html" style="text-decoration: none; color:white;" target="_blank"><h3>Batman Begins</h3></a>
+            <span>140 min | Action</span>
+        </div>
+
+      <!-- box-7  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies17.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/09/b0/22/09b022bf306d9a703d3b4b5ffc321386.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies17.html" style="text-decoration: none; color:white;" target="_blank"><h3>Grimm</h3></a>
+            <span>45 min | Science</span>
+        </div>
+    
+      <!-- box-8  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies18.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/a8/2c/4d/a82c4d8ba2e1b4a3e8b4e805a0b6d7fd.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies18.html" style="text-decoration: none; color:white;" target="_blank"><h3>The Covenant</h3></a>
+            <span>123 min | Drama</span>
+        </div>
+
+      <!-- box-9  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies19.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/c3/98/29/c39829b4176947dc7e903c696f2ca990.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies19.html" style="text-decoration: none; color:white;" target="_blank"><h3>Inception</h3></a>
+            <span>148 min | Thriller</span>
+        </div>
+
+      <!-- box-10  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies20.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/4c/29/d6/4c29d6753e61511d6369567214af2f53.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies20.html" style="text-decoration: none; color:white;" target="_blank"><h3>Interstellar</h3></a>
+            <span>149 min | Science</span>
+        </div>
+      </div>
+</section>
+
+
+<!-- Series -->
+<section class="movies" id="series">
+      <h2 class="heading">SERIES</h2>
+      <!-- movies container  -->
+      <div class="movies-container">
+        <!-- box-1  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies21.html" target="_blank"><img src="https://i.pinimg.com/474x/fe/9b/68/fe9b686f5d90db771e8b1f7e969f30c9.jpg" alt=""></a>
+            </div>
+            <a href="movies21.html" style="text-decoration: none; color:white;" target="_blank"><h3>Breaking Bad</h3></a>
+            <span>58 min | Action</span>
+        </div>
+
+        <!-- box-2  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies22.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/32/d8/0c/32d80c17ee1c73f970ce5e7491d6b685.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies22.html" style="text-decoration: none; color:white;" target="_blank"><h3>Chernobyl</h3></a>
+            <span>60 min | Drama</span>
+        </div>
+
+        <!-- box-3  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies23.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/78/8f/72/788f72f0e17e722cdeb92e2631f434d2.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies23.html" style="text-decoration: none; color:white;" target="_blank"><h3>Supernatural</h3></a>
+            <span>60 min | Thriller</span>
+        </div>
+
+        <!-- box-4  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies24.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/f0/f4/e1/f0f4e19c8a9598735b181f48f9447cb9.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies24.html" style="text-decoration: none; color:white;" target="_blank"><h3>Prison Break</h3></a>
+            <span>45 min | Drama</span>
+        </div>
+    
+        <!-- box-5  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies25.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/6e/42/0b/6e420b7bd2a65359258ee4c5ee1501dd.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies25.html" style="text-decoration: none; color:white;" target="_blank"><h3>Money Heist</h3></a>
+            <span>50 min | Action</span>
+        </div>
+
+        <!-- box-6  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies26.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/7b/8e/36/7b8e363a34e3a6522906e42f059a3a1d.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies26.html" style="text-decoration: none; color:white;" target="_blank"><h3>Girl From Nowhere</h3></a>
+            <span>45 min | School</span>
+        </div>
+
+      <!-- box-7  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies27.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/b8/69/ec/b869ec1dc2a7ba9cdf6f652a6faa3539.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies27.html" style="text-decoration: none; color:white;" target="_blank"><h3>The Walking Dead</h3></a>
+            <span>55 min | Action</span>
+        </div>
+    
+      <!-- box-8  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies28.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/8d/9a/66/8d9a665bfc4c0c7d5ab8cf07418514ad.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies28.html" style="text-decoration: none; color:white;" target="_blank"><h3>The Good Doctor</h3></a>
+            <span>43 min | Drama</span>
+        </div>
+
+      <!-- box-9  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies29.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/23/32/a2/2332a272063b7fdabd97dfb2d52f806d.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies29.html" style="text-decoration: none; color:white;" target="_blank"><h3>The Umbrella Academy</h3></a>
+            <span>59 min | Action</span>
+        </div>
+
+      <!-- box-10  -->
+        <div class="box">
+            <div class="box-img">
+                <a href="movies30.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/4d/88/33/4d8833ec31776b5c72214a3deee77c92.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies30.html" style="text-decoration: none; color:white;" target="_blank"><h3>American Horror Story</h3></a>
+            <span>45 min | Thriller</span>
+        </div>
+      </div>
+</section>
+
+
+
+<!-- coming  -->
+<section class="coming" id="coming">
+    <h2 class="heading">Coming Soon</h2>
+    <!-- coming container  -->
+    <div class="coming-container swiper">
+       <div class="swiper-wrapper">
+         <!-- box-1  -->
+         <div class="swiper-slide box">
+            <div class="box-img">
+                <a href="movies31.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/93/ad/55/93ad55cc67345ef28c9ebd315582e3a4.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies31.html" style="text-decoration: none; color:white;" target="_blank"><h3>Ant-Man and the Wasp:Quantumania</h3></a>
+        </div>
+
+        <!-- box-2  -->
+        <div class="swiper-slide box">
+            <div class="box-img">
+                <a href="movies32.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/e3/85/5b/e3855b8e6cac200c1c55d170531a7917.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies32.html" style="text-decoration: none; color:white;" target="_blank"><h3>The Flash</h3></a>
+        </div>
+
+        <!-- box-3  -->
+        <div class="swiper-slide box">
+            <div class="box-img">
+                <a href="movies33.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/7a/7e/05/7a7e05bae63cafec92f369c9b6f2c686.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies33.html" style="text-decoration: none; color:white;" target="_blank"><h3>Guardians of the Galaxy Vol. 3</h3></a>
+        </div>
+
+        <!-- box-4  -->
+        <div class="swiper-slide box">
+            <div class="box-img">
+                <a href="movies34.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/30/be/dd/30bedddb077870a50852fd2fea805db5.jpg" alt="">
+                </a>
+            </div>
+            <a href="movies34.html" style="text-decoration: none; color:white;" target="_blank"><h3>Shazam! Fury of the Gods</h3></a>
+        </div>
+    
+        <!-- box-5  -->
+        <div class="swiper-slide box">
+            <div class="box-img">
+                <a href="movies35.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/f3/c2/97/f3c2971e68d31d7a46c96baae660d2bb.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies35.html" style="text-decoration: none; color:white;" target="_blank"><h3>Aquaman and the Lost Kingdom</h3></a>
+        </div>
+
+        <!-- box-6  -->
+        <div class="swiper-slide box">
+            <div class="box-img">
+                <a href="movies36.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/a9/d7/aa/a9d7aa8081c175ac68d8d191a2aa8329.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies36.html" style="text-decoration: none; color:white;" target="_blank"><h3>John Wick:Chapter 4</h3></a>
+        </div>
+
+      <!-- box-7  -->
+        <div class="swiper-slide box">
+            <div class="box-img">
+                <a href="movies37.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/0f/f0/10/0ff010231db67df023d0c11ba1cc4c7f.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies37.html" style="text-decoration: none; color:white;" target="_blank"><h3>Transformers rise of the beasts</h3></a>
+        </div>
+    
+      <!-- box-8  -->
+        <div class="swiper-slide box">
+            <div class="box-img">
+                <a href="movies38.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/7e/a3/99/7ea399e4b592a0b969d77916a93e001a.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies38.html" style="text-decoration: none; color:white;" target="_blank"><h3>Mission: Impossible 7</h3></a>
+        </div>
+
+      <!-- box-9  -->
+        <div class="swiper-slide box">
+            <div class="box-img">
+                <a href="movies39.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/66/a0/00/66a00014d89467f4d6a2b79cb2752414.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies39.html" style="text-decoration: none; color:white;" target="_blank"><h3>Deadpool 3</h3></a>
+        </div>
+
+      <!-- box-10  -->
+        <div class="swiper-slide box">
+            <div class="box-img">
+                <a href="movies40.html" target="_blank">
+                    <img src="https://i.pinimg.com/474x/48/7f/c1/487fc157a66019f404bccfbd72f20ff1.jpg" alt="">
+                </a>    
+            </div>
+            <a href="movies40.html" style="text-decoration: none; color:white;" target="_blank"><h3>Dune: Part Two</h3></a>
+        </div>
+       </div>
+    </div>
+</section>
+
+
+
+<!-- Newsletter  -->
+<section class="newsletter" id="newsletter">
+    <h2>Subscribe To Get <br>Newsletter</h2>
+    <form action="">
+        <input type="email" class="email" placeholder="Enter Email" required>
+        <input type="submit" value="Subscribe" class="btn">
+    </form>
+</section>
+
+<!-- Footer  -->
+<!-- <section class="footer">
+    <a href="" class="logo">
+        <i class="bx bxs-movie"></i>Sanamio
+    </a>
+    <div class="social">
+        <a href=""><i class='bx bxl-facebook'></i></a>
+        <a href=""><i class='bx bxl-twitter'></i></a>
+        <a href=""><i class='bx bxl-instagram'></i></a>
+    </div>
+</section> -->
+<section class="footer">
+    <div class="row">
+        <div class="col">
+            <a href="index1.html">
+                <img src="images/logo/e.png" class="logo">
+                <span class="logo1">Film Review</span>
+            </a>
+            <p>Subscribe Easy Tutorials Youtube channel to watch more videos on website development and Press the bell icon to get immediate notification of latest videos.</p>
+        </div>
+        <div class="col">
+            <h3>Office <div class="underline"><span></span></div></h3>
+            <p>ITPL Road</p>
+            <p>Whitefiled, Bangalore</p>
+            <p>DaNang, PIN 560066, VietNam</p>
+            <p class="email-id">avinashdm@outlook.com</p>
+            <h4>+84 - 954368591</h4>
+        </div>
+        <div class="col">
+            <h3>Links <div class="underline"><span></span></div></h3>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="movies">Movie</a></li>
+                <li><a href="genre">Genre</a></li>
+                <li><a href="series">Series</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Newsletter <div class="underline"><span></span></div></h3>
+            <form>
+                <i class="far fa-envelope"></i>
+                <input type="email" placeholder="Enter your email id" required>
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100057074845512"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.youtube.com/@phephimreview8"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/moviereviewsblog/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.pinterest.com/search/pins/?q=film%20review&rs=typed"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">Film Review © 2023 - All Rights Reserved</p>
+</section>
+
+<!-- Copyright  -->
+ <!-- <div class="copyright">
+    <p>&#169; Sanamio  ALl Right Reserved</p>
+ </div -->
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="main1.js"></script>
+</body>
+</html>
